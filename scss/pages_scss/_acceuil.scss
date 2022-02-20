@@ -61,3 +61,58 @@ nav a:hover::after {
     color: #fff;
     background: linear-gradient(45deg, $color-primary, rgb(50, 151, 168));
 }
+
+.responsive-nav-btn {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+
+// ---------------- Media Queries de la nav ----------------
+
+@media screen and (max-width: 950px){
+    .responsive-nav-btn {
+        display: block;
+        cursor: pointer;
+    }
+    nav {
+        justify-content: center;
+        flex-direction: column;
+        height: auto;
+        position: absolute;
+        top: -5px;
+        border-bottom: 1px solid #000;
+    }
+    nav ul {
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        border-bottom: 1px solid #000;
+        display: none;
+    }
+    .logo-nav {
+        padding-left: 0;
+        width: 100%;
+        background: #fff;
+        text-align: center;
+        height: 70px;
+        line-height: 70px;
+    }
+    nav ul li {
+        height: 70px;
+        line-height: 70px;
+    }
+    .lien-essai {
+        display: none;
+    }
+    .active-nav {
+        display: flex;
+    }
+}
