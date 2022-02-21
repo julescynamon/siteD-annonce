@@ -151,7 +151,7 @@ nav a:hover::after {
 
 }
 
-h1 {
+.titre-global {
     @extend %titre-global;
 }
 
@@ -205,4 +205,143 @@ h1 {
     .acceuil img {
         width: 310px;
     }
+}
+
+// ---------------- Container Performances ----------------
+
+.container-performances {
+    padding: 120px 20px 170px;
+    margin-bottom: 100px;
+    background-image: linear-gradient(45deg,
+            rgba(251, 247, 230, 0.53) 0%,
+            rgba(251, 247, 230, 0.53) 14.286%,
+            rgba(245, 255, 242, 0.53) 14.286%,
+            rgba(245, 255, 242, 0.53) 28.572%,
+            rgba(243, 255, 252, 0.53) 28.572%,
+            rgba(243, 255, 252, 0.53) 42.858%,
+            rgba(209, 254, 255, 0.53) 42.858%,
+            rgba(209, 254, 255, 0.53) 57.144%,
+            rgba(157, 242, 255, 0.53) 57.144%,
+            rgba(157, 242, 255, 0.53) 71.42999999999999%,
+            rgba(122, 231, 255, 0.53) 71.43%,
+            rgba(122, 231, 255, 0.53) 85.71600000000001%,
+            rgba(144, 224, 246, 0.53) 85.716%,
+            rgba(144, 224, 246, 0.53) 100.002%),
+        linear-gradient(135deg,
+            rgb(248, 144, 216) 0%,
+            rgb(248, 144, 216) 12.5%,
+            rgb(255, 161, 235) 12.5%,
+            rgb(255, 161, 235) 25%,
+            rgb(246, 167, 241) 25%,
+            rgb(246, 167, 241) 37.5%,
+            rgb(242, 184, 251) 37.5%,
+            rgb(242, 184, 251) 50%,
+            rgb(224, 183, 246) 50%,
+            rgb(224, 183, 246) 62.5%,
+            rgb(212, 183, 253) 62.5%,
+            rgb(212, 183, 253) 75%,
+            rgb(161, 146, 251) 75%,
+            rgb(161, 146, 251) 87.5%,
+            rgb(147, 159, 248) 87.5%,
+            rgb(147, 159, 248) 100%);
+    clip-path: polygon(0 0, 100% 17%, 100% 100%, 0 82%);
+}
+
+.separation {
+    margin: 0 auto 70px;
+    height: 2px;
+    width: 300px;
+    border-radius: 3px;
+    background: #000;
+    border: none;
+}
+
+.container-boxs {
+    width: 100%;
+    @extend %flex-double-centre;
+}
+
+.box {
+    margin: 0 50px;
+}
+
+.box p {
+    text-align: center;
+}
+
+.nombre-clients {
+    font-size: 85px;
+    padding-bottom: 10px;
+}
+
+.types-de-clients {
+    font-size: 30px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.info-clients {
+    font-size: 20px;
+}
+
+// ---------------- Media Queries de Performances ----------------
+
+@media screen and (max-width: 1000px) {
+    .nombre-clients {
+        font-size: 80px;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .container-performances {
+        padding: 175px 20px 150px;
+    }
+
+    .separation {
+        margin: 0 auto 30px;
+        width: 30%;
+    }
+
+    .container-boxs {
+        flex-direction: column;
+    }
+
+    .box {
+        margin: 0 20px;
+    }
+
+    .nombre-clients {
+        font-size: 80px;
+    }
+
+    .types-de-clients {
+        font-size: 25px;
+    }
+
+    .info-clients {
+        font-size: 22px;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .container-performances {
+        padding: 135px 20px 150px;
+    }
+
+    .nombre-clients {
+        font-size: 50px;
+    }
+
+    .types-de-clients {
+        font-size: 22px;
+    }
+
+    .info-clients {
+        font-size: 20px;
+    }
+
 }
