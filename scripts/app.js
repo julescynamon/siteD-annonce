@@ -10,14 +10,14 @@ btnNav.addEventListener('click', () => {
     listNav.classList.toggle('active-nav');
 
     if (imgBtn.src.includes('menu')) {
-        
-        imgBtn.src = './ressources/croix.svg';
+
+        imgBtn.src = '../ressources/croix.svg';
         imgBtn.style.width = '20px';
         imgBtn.style.height = '20px';
 
     } else {
 
-        imgBtn.src = './ressources/menu.svg';
+        imgBtn.src = '../ressources/menu.svg';
         imgBtn.style.width = '40px';
         imgBtn.style.height = '40px';
 
@@ -28,11 +28,11 @@ btnNav.addEventListener('click', () => {
 
 // ------------- FAQ -------------
 
-const allCross = document.querySelectorAll ('.panneau-visible img');
+const allCross = document.querySelectorAll('.panneau-visible img');
 
 allCross.forEach(logo => {
 
-    logo.addEventListener('click', function() {
+    logo.addEventListener('click', function () {
 
         const height = this.parentNode.parentNode.childNodes[3].scrollHeight;
         const currentChoice = this.parentNode.parentNode.childNodes[3];
@@ -54,5 +54,32 @@ allCross.forEach(logo => {
         }
 
     });
+
+});
+
+// ------------- Tableaux tarifs -------------
+
+const choixTarifs = Array.from(document.querySelectorAll('.choix'));
+const contenuTarifs = Array.from(document.querySelectorAll('.panneau'));
+
+choixTarifs.forEach(choix => {
+
+    choix.addEventListener('click', (e) => {
+
+        let indexClick = choixTarifs.indexOf(e.target);
+
+        for (i = 0; i < choixTarifs.length; i++) {
+
+            if (i === indexClick) {
+                choixTarifs[i].classList.add('active-choix');
+                contenuTarifs[i].classList.add('panneau-active');
+            } else {
+                choixTarifs[i].classList.remove('active-choix');
+                contenuTarifs[i].classList.remove('panneau-active');
+            }
+
+        }
+
+    })
 
 });
