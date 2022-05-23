@@ -34,8 +34,8 @@ allCross.forEach(logo => {
 
     logo.addEventListener('click', function () {
 
-        const height = this.parentNode.childNodes[3].scrollHeight;
-        const currentChoice = this.parentNode.childNodes[3];
+        const height = this.parentNode.parentNode.childNodes[3].scrollHeight;
+        const currentChoice = this.parentNode.parentNode.childNodes[3];
 
         if (this.src.includes('plus')) {
 
