@@ -1,1 +1,1 @@
-site statique créer uniquement en html, css et js pour s'entrainer 
+site statique créer uniquement en html, scss et js pour s'entrainer 
